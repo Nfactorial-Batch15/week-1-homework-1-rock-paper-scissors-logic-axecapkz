@@ -86,10 +86,9 @@ func checkWinner(){
         print("Something gone wrong.")
     }
 }
-
+var i = 1
 func playGame(){
-    var i = 1
-    print("Round \(i). Chose your weapon: Rock, Scissors or Paper.")
+    print("Round \(i + 1). Chose your weapon: Rock, Scissors or Paper.")
     i += 1
 }
 
