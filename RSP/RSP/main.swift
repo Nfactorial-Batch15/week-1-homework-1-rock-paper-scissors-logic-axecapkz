@@ -16,7 +16,7 @@ enum selectWeapon: String {
 enum gameStatus: String {
     case Won = "You won!"
     case Lost = "You lost!"
-    case Draw = "It's draw!"
+    case Draw = "It's a draw!"
 }
 
 func gameIntro(){
