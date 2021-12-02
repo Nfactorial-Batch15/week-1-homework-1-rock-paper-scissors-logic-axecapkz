@@ -7,6 +7,21 @@
 
 import Foundation
 
+gameIntro()
+playGame()
+var userChoice = readLine()
+let botGuess = ["Rock", "Scissors", "Paper"]
+var botChoice = botGuess.randomElement()
+checkWinner()
+playGame()
+userChoice = readLine()
+botChoice = botGuess.randomElement()
+checkWinner()
+playGame()
+userChoice = readLine()
+botChoice = botGuess.randomElement()
+checkWinner()
+
 enum selectWeapon: String {
     case Rock = "Rock"
     case Scissors = "Scissors"
@@ -23,16 +38,18 @@ func gameIntro(){
     print("Hello, please choose your weapon!")
 }
 
-let botGuess = ["Rock", "Scissors", "Paper"]
-var botChoice = botGuess.randomElement()
 
-var userChoice = readLine()
+
+// var userChoice = readLine()
 func userWeapon(){
-    print(userChoice!)
+    print(userChoice)
 }
 
+//let botGuess = ["Rock", "Scissors", "Paper"]
+//var botChoice = botGuess.randomElement()
+
 func botWeapon(){
-    print(botChoice!)
+    print(botChoice)
 }
 
 func checkWinner(){
@@ -71,13 +88,8 @@ func checkWinner(){
 }
 
 func playGame(){
-    for i in 1...3 {
-        print("Round \(i). Chose your weapon: Rock, Scissors or Paper.")
-        userWeapon()
-        botWeapon()
-        checkWinner()
-    }
+    var i = 1
+    print("Round \(i). Chose your weapon: Rock, Scissors or Paper.")
+    i += 1
 }
 
-gameIntro()
-playGame()
