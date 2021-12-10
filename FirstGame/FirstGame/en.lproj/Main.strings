@@ -1,0 +1,54 @@
+
+/* Class = "UILabel"; text = "You"; ObjectID = "6C1-oE-s53"; */
+"6C1-oE-s53.text" = "You";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "9fw-dA-zzT"; */
+"9fw-dA-zzT.text" = "0";
+
+/* Class = "UIButton"; accessibilityLabel = "3"; ObjectID = "IJx-t1-hxk"; */
+"IJx-t1-hxk.accessibilityLabel" = "3";
+
+/* Class = "UIButton"; normalTitle = "Paper"; ObjectID = "IJx-t1-hxk"; */
+"IJx-t1-hxk.normalTitle" = "Paper";
+
+/* Class = "UIButton"; accessibilityLabel = "2"; ObjectID = "K8l-dl-XRX"; */
+"K8l-dl-XRX.accessibilityLabel" = "2";
+
+/* Class = "UIButton"; normalTitle = "Scissors"; ObjectID = "K8l-dl-XRX"; */
+"K8l-dl-XRX.normalTitle" = "Scissors";
+
+/* Class = "UIButton"; configuration.title = "PLAY AGAIN"; ObjectID = "QYJ-Hk-B71"; */
+"QYJ-Hk-B71.configuration.title" = "PLAY AGAIN";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QYJ-Hk-B71"; */
+"QYJ-Hk-B71.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "UDO-si-f3w"; */
+"UDO-si-f3w.text" = "0";
+
+/* Class = "UIButton"; normalTitle = "Play"; ObjectID = "Vco-5f-zli"; */
+"Vco-5f-zli.normalTitle" = "Play";
+
+/* Class = "UILabel"; text = "Score"; ObjectID = "Xn1-p3-BXN"; */
+"Xn1-p3-BXN.text" = "Score";
+
+/* Class = "UILabel"; text = "Bot"; ObjectID = "ZpV-O3-VNo"; */
+"ZpV-O3-VNo.text" = "Bot";
+
+/* Class = "UILabel"; text = "Do you want play again?"; ObjectID = "fxG-fb-JJM"; */
+"fxG-fb-JJM.text" = "Do you want play again?";
+
+/* Class = "UIButton"; accessibilityLabel = "1"; ObjectID = "hxI-Bd-EEv"; */
+"hxI-Bd-EEv.accessibilityLabel" = "1";
+
+/* Class = "UIButton"; normalTitle = "Rock"; ObjectID = "hxI-Bd-EEv"; */
+"hxI-Bd-EEv.normalTitle" = "Rock";
+
+/* Class = "UILabel"; text = "Do you want play again?"; ObjectID = "qTT-0M-sV2"; */
+"qTT-0M-sV2.text" = "Do you want play again?";
+
+/* Class = "UIButton"; configuration.title = "PLAY AGAIN"; ObjectID = "umk-FC-Gcm"; */
+"umk-FC-Gcm.configuration.title" = "PLAY AGAIN";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "umk-FC-Gcm"; */
+"umk-FC-Gcm.normalTitle" = "Button";

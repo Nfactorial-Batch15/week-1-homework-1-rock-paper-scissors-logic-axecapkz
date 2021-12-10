@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		815068812763290500E7D98F /* WinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815068802763290500E7D98F /* WinViewController.swift */; };
+		815068832763291D00E7D98F /* LoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815068822763291D00E7D98F /* LoseViewController.swift */; };
 		81E31716275A8E2200810271 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E31715275A8E2200810271 /* AppDelegate.swift */; };
 		81E31718275A8E2200810271 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E31717275A8E2200810271 /* SceneDelegate.swift */; };
 		81E3171A275A8E2200810271 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E31719275A8E2200810271 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		815068802763290500E7D98F /* WinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinViewController.swift; sourceTree = "<group>"; };
+		815068822763291D00E7D98F /* LoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoseViewController.swift; sourceTree = "<group>"; };
 		81E31712275A8E2200810271 /* FirstGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E31715275A8E2200810271 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E31717275A8E2200810271 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8150687F276328C500E7D98F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				815068802763290500E7D98F /* WinViewController.swift */,
+				815068822763291D00E7D98F /* LoseViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		81E31709275A8E2200810271 = {
 			isa = PBXGroup;
 			children = (
@@ -59,6 +72,7 @@
 				81E31715275A8E2200810271 /* AppDelegate.swift */,
 				81E31717275A8E2200810271 /* SceneDelegate.swift */,
 				81E31719275A8E2200810271 /* ViewController.swift */,
+				8150687F276328C500E7D98F /* Controllers */,
 				81E3171B275A8E2200810271 /* Main.storyboard */,
 				81E3171E275A8E2300810271 /* Assets.xcassets */,
 				81E31720275A8E2300810271 /* LaunchScreen.storyboard */,
@@ -146,6 +160,8 @@
 				81E3171A275A8E2200810271 /* ViewController.swift in Sources */,
 				81E31716275A8E2200810271 /* AppDelegate.swift in Sources */,
 				81E31718275A8E2200810271 /* SceneDelegate.swift in Sources */,
+				815068832763291D00E7D98F /* LoseViewController.swift in Sources */,
+				815068812763290500E7D98F /* WinViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

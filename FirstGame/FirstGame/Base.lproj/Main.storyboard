@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FirstGame" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="FirstGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,22 +179,136 @@
                             <constraint firstItem="SS2-GW-KGo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="q96-7h-SPd"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="whW-6Q-W64"/>
                     <connections>
                         <outlet property="botScore" destination="UDO-si-f3w" id="jTD-XX-uzp"/>
                         <outlet property="gameStatus" destination="9gB-wg-HbN" id="Fh6-qI-xVf"/>
                         <outlet property="imageBot" destination="2YG-ue-ROV" id="P6g-ma-uqS"/>
                         <outlet property="imageUser" destination="vFU-nc-byd" id="YR9-Cy-teF"/>
                         <outlet property="userScore" destination="9fw-dA-zzT" id="zNr-zj-EoS"/>
+                        <segue destination="t0q-Np-mNS" kind="presentation" identifier="goToWin" id="Htk-Ce-xaI"/>
+                        <segue destination="v9a-lh-IoW" kind="presentation" identifier="goToLose" id="aLh-B4-SOm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
         </scene>
+        <!--Win View Controller-->
+        <scene sceneID="3Lq-NN-ffb">
+            <objects>
+                <viewController id="t0q-Np-mNS" customClass="WinViewController" customModule="FirstGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fs0-UV-gxt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="youwin" translatesAutoresizingMaskIntoConstraints="NO" id="7pD-HM-wjB">
+                                <rect key="frame" x="57" y="254" width="300" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="29V-8A-dU8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Do you want to play again?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qTT-0M-sV2">
+                                <rect key="frame" x="0.0" y="76" width="414" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="ay7-6c-cqp"/>
+                                    <constraint firstAttribute="width" constant="415" id="jeM-G2-Rmi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <color key="textColor" red="0.23529411759999999" green="0.31764705879999999" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="If yes swipe it down, otherwise close the app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZ3-qE-CMC">
+                                <rect key="frame" x="20" y="594" width="374" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="415" id="0Gj-p4-eO2"/>
+                                    <constraint firstAttribute="height" constant="107" id="zef-QG-nDO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <color key="textColor" red="0.23529411759999999" green="0.31764705879999999" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QKj-La-o4z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UZ3-qE-CMC" firstAttribute="leading" secondItem="Fs0-UV-gxt" secondAttribute="leadingMargin" id="8QV-4O-QD4"/>
+                            <constraint firstItem="7pD-HM-wjB" firstAttribute="top" secondItem="qTT-0M-sV2" secondAttribute="bottom" constant="27" id="D5z-tf-JfR"/>
+                            <constraint firstItem="7pD-HM-wjB" firstAttribute="centerX" secondItem="qTT-0M-sV2" secondAttribute="centerX" id="E7E-DB-oE4"/>
+                            <constraint firstItem="7pD-HM-wjB" firstAttribute="top" secondItem="Fs0-UV-gxt" secondAttribute="top" constant="254" id="WTZ-1j-uUr"/>
+                            <constraint firstItem="qTT-0M-sV2" firstAttribute="leading" secondItem="QKj-La-o4z" secondAttribute="leading" id="Wxr-M6-pmk"/>
+                            <constraint firstItem="qTT-0M-sV2" firstAttribute="trailing" secondItem="QKj-La-o4z" secondAttribute="trailing" id="WyG-6Q-dlW"/>
+                            <constraint firstItem="UZ3-qE-CMC" firstAttribute="top" secondItem="7pD-HM-wjB" secondAttribute="bottom" constant="8" id="ZC8-sn-1OT"/>
+                            <constraint firstItem="7pD-HM-wjB" firstAttribute="centerX" secondItem="Fs0-UV-gxt" secondAttribute="centerX" id="fj2-0X-E9F"/>
+                            <constraint firstItem="7pD-HM-wjB" firstAttribute="leading" secondItem="QKj-La-o4z" secondAttribute="leading" constant="57" id="h0q-Vs-UMC"/>
+                            <constraint firstItem="UZ3-qE-CMC" firstAttribute="centerX" secondItem="7pD-HM-wjB" secondAttribute="centerX" id="kjg-CR-QVs"/>
+                            <constraint firstItem="qTT-0M-sV2" firstAttribute="top" secondItem="QKj-La-o4z" secondAttribute="top" constant="76" id="ws8-Hl-CgO"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iAd-Xc-0e6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="879.71014492753625" y="-149.33035714285714"/>
+        </scene>
+        <!--Lose View Controller-->
+        <scene sceneID="tXY-QN-bpj">
+            <objects>
+                <viewController id="v9a-lh-IoW" customClass="LoseViewController" customModule="FirstGame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cDg-wC-zNG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="youlose" translatesAutoresizingMaskIntoConstraints="NO" id="sVl-02-d5t">
+                                <rect key="frame" x="57" y="210" width="300" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="290" id="A4d-j4-0mQ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do you want to play again?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fxG-fb-JJM">
+                                <rect key="frame" x="0.0" y="76" width="414" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="107" id="TOl-su-jQI"/>
+                                    <constraint firstAttribute="width" constant="414" id="cgV-rV-5Jj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <color key="textColor" red="0.23529411759999999" green="0.31764705879999999" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If yes swipe it down, otherwise close the app" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQK-t4-oJr">
+                                <rect key="frame" x="-0.5" y="572" width="415" height="107"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="415" id="TMV-Ri-U03"/>
+                                    <constraint firstAttribute="height" constant="107" id="zH9-lz-TsG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="27"/>
+                                <color key="textColor" red="0.23529411759999999" green="0.31764705879999999" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NJM-7h-dvz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fxG-fb-JJM" firstAttribute="top" secondItem="NJM-7h-dvz" secondAttribute="top" constant="76" id="1uP-PD-DHq"/>
+                            <constraint firstItem="sVl-02-d5t" firstAttribute="leading" secondItem="NJM-7h-dvz" secondAttribute="leading" constant="57" id="3Fy-Zx-xgv"/>
+                            <constraint firstItem="fxG-fb-JJM" firstAttribute="leading" secondItem="NJM-7h-dvz" secondAttribute="leading" id="3tR-3M-a5E"/>
+                            <constraint firstItem="FQK-t4-oJr" firstAttribute="centerX" secondItem="sVl-02-d5t" secondAttribute="centerX" id="OJL-5i-DGA"/>
+                            <constraint firstItem="FQK-t4-oJr" firstAttribute="top" secondItem="sVl-02-d5t" secondAttribute="bottom" constant="72" id="Ooe-E0-kXb"/>
+                            <constraint firstItem="fxG-fb-JJM" firstAttribute="trailing" secondItem="NJM-7h-dvz" secondAttribute="trailing" id="Y91-vf-qHW"/>
+                            <constraint firstItem="sVl-02-d5t" firstAttribute="top" secondItem="fxG-fb-JJM" secondAttribute="bottom" constant="27" id="xgv-3W-KwQ"/>
+                            <constraint firstItem="sVl-02-d5t" firstAttribute="centerX" secondItem="fxG-fb-JJM" secondAttribute="centerX" id="zac-xI-to4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bAp-f4-hug" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="882.60869565217399" y="512.94642857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="paper" width="100" height="100"/>
         <image name="rock" width="100" height="100"/>
+        <image name="youlose" width="112.5" height="112.5"/>
+        <image name="youwin" width="112.5" height="112.5"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
